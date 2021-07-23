@@ -2,7 +2,7 @@ import React from 'react'
 
 
 function getDateString(dateTimeStr) {
-     return new Date(dateTimeStr).toDateString()
+     return new Date(dateTimeStr).toLocaleDateString()
 } 
 
 const NewsItem = ({ item }) => (
@@ -31,7 +31,7 @@ const NewsItem = ({ item }) => (
                         published at {getDateString(item.publishedAt) }
                     </strong>
                 </small>
-                <div style={{padding:'0.25rem 0.5rem', background:'#ededed', color: '#424242', borderRadius: '0.25rem',display: 'inline-block' } } className="ml-auto">
+                <div style={{padding:'0.25rem 0.5rem', background:'#ededed', color: '#424242', borderRadius: '0.25rem',display: 'inline-block',  marginLeft: 'auto' } } >
                     <small>{item.source.name }</small>
                 </div> 
             </div>
